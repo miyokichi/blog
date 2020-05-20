@@ -7,7 +7,7 @@ class WebsiteHeader
     public static function output()
     {
         //ルート直下のコンテンツを取得
-        $rootContent = new \module\Content\Content(\Setting::$rootContentPath);
+        $rootContent = new \module\Content\Content(\Setting::ROOT_CONTENT_PATH);
         $headerListContentPaths = $rootContent->GetChildContentPaths();
         $headerListContents = array();
         foreach ($headerListContentPaths as $headerListContentPath) {
@@ -19,7 +19,7 @@ class WebsiteHeader
         <header class="header">
             <div class="header_website-name">
                 <a href="/">
-                    <?=\Setting::$websiteName?>
+                    <?=\Setting::WEBSITE_NAME?>
                 </a>
             </div>
             <nav class="header_nav">

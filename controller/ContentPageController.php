@@ -40,7 +40,7 @@ class ContentPageController
 <!--- htmlの出力 --------------------------------------------------------------------------------------------->
 <html>
 
-<?=\view\Head::output($content->title.' | '.\Setting::$websiteName, $content->abstract)?>
+<?=\view\Head::output($content->title.' | '.\Setting::WEBSITE_NAME, $content->abstract)?>
 
 <body>
     <?=\view\WebsiteHeader::output()?>

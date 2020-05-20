@@ -23,7 +23,7 @@ class Content extends MarkdownObject
      * コンテンツへのアクセスパスを取得
      */
     public function GetAccessPath(){
-        return '/' . \str_replace(\Setting::$rootContentPath,'', $this->contentPath);
+        return '/' . \str_replace(\Setting::ROOT_CONTENT_PATH,'', $this->contentPath);
     }
 
     /**
@@ -86,7 +86,7 @@ class Content extends MarkdownObject
     public function GetParentContentPath()
     {
         $parentContentPath = false;
-        if ($this->contentPath != \Setting::$rootContentPath) {
+        if ($this->contentPath != \Setting::ROOT_CONTENT_PATH) {
             $pathParamater = explode('/', $this->contentPath);
             for ($i=0; $i<(count($pathParamater)-2); $i++) {
                 $parentContentPath = $parentContentPath . $pathParamater[$i]. '/';

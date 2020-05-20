@@ -8,7 +8,7 @@ class WebsiteFooter
     {
         ?>
         <footer class="footer">
-            <p class='footer_text'>© All rights reserved by <?=\Setting::$websiteName?></p>
+            <p class='footer_text'>© All rights reserved by <?=\Setting::WEBSITE_NAME?></p>
         </footer>
         <?php
     }

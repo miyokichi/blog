@@ -18,14 +18,6 @@ class TagIndexer
     }
 
     /**
-     * インデックスを取得。
-     */
-    public function GetIndex()
-    {
-        return $this->index;
-    }
-
-    /**
      * インデックスを生成。
      */
     public function GenerateIndex($contentsMetaCacheFilePath)

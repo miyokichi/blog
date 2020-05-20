@@ -34,7 +34,7 @@ class ContentsMetaCacheObject
     /**
      * コンテンツのキャッシュを生成。
      */
-    public function GenerateCache($currentContentPath)
+    public function GenerateCache($currentContentPath = \Setting::ROOT_CONTENT_PATH)
     {
         $currentContent = new \module\Content\Content($currentContentPath);
         $currentContent->MetaPurse();
@@ -43,6 +43,7 @@ class ContentsMetaCacheObject
         $this->cache[$currentContentPath]=
             [
                 'contentPath' => $currentContentPath,
+                'accessPath' => $currentContent->GetAccessPath(),
                 'title' => $currentContent->title,
                 'createAt' => $currentContent->createdAt,
                 'updateAt' => $currentContent->updatedAt,
@@ -53,7 +54,7 @@ class ContentsMetaCacheObject
         
         if(!empty($childContentPaths)){
             foreach ($childContentPaths as $childContentPath) {
-                $this->Cache($childContentPath);
+                $this->GenerateCache($childContentPath);
             }
         }
     }

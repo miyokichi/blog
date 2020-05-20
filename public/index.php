@@ -17,6 +17,13 @@ if (array_key_exists('pathname', $_GET)) {
 
 //タグでの検索の場合-----------------------------------------------------------------------------------
 if ($pathname === 'search/') {
+    controller\TagSearchPageController::Show($_GET['tag_name']);
+    exit;
+}
+
+//インデックスを行う場合--------------------------------------------------------------------------------
+if($pathname === 'index/'){
+    controller\IndexResultPageController::Show();
     exit;
 }
 
@@ -76,7 +83,7 @@ else {
 <!--- htmlの出力(top page) --------------------------------------------------------------------------------------------->
 <html>
 
-<?=\view\Head::output($content->title.' | '.\Setting::$websiteName, $content->abstract)?>
+<?=\view\Head::output($content->title.' | '.\Setting::WEBSITE_NAME, $content->abstract)?>
 
 <body>
     <?=\view\WebsiteHeader::output()?>
