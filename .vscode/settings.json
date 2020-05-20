@@ -1,0 +1,12 @@
+{
+    "files.eol": "\n",
+    "liveServer.settings.host": "127.0.0.1",
+    "liveSassCompile.settings.formats": [
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/public/css/"
+        }
+    ]
+}
