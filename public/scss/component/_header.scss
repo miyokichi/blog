@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+    padding: 15px 0;
+    margin: 0 auto;
+    background-color: black;
+    text-align: center;
+
+    &_website-name a {
+        color: white;
+        text-decoration: none;
+        margin: 0 0 auto;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        font-family:
+            "noto serif",
+            serif;
+        font-size: 32px;
+    }
+
+    &_nav-list {
+        text-align: center;
+        padding: 10px 0;
+        margin: 0 auto;
+
+        &_item {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+
+            a {
+                color: white;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,3 @@
+controllerはルーティングごとの機能をまとめたもの。
+controllerは常にstatic classで実装。
+module, viewを用いることができる。
