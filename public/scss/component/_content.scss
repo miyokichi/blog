@@ -110,12 +110,64 @@
 
     &_index {
         grid-area: index;
-        border: solid black 1px;
-        padding: 5%;
-        margin: 3%;
+        margin: 1rem;
 
-        &_item {
-            display: block;
+        &_box {
+            position: sticky;
+            top: 0;
+            padding: 1rem;
+
+            &_label {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            & input {
+                display: none;
+
+                //画面が1080pxより大きい場合
+                @media screen and (min-width: 1080px) {
+                    &+ul {
+                        display: block;
+                    }
+                }
+
+                //画面が1080pxより小さい場合
+                @media screen and (max-width: 1080px) {
+                    &+ul {
+                        display: none;
+                    }
+                }
+
+                &:checked+ul {
+                    display: block;
+                }
+            }
+
+            ul {
+                display: block;
+                list-style: none;
+                padding-left: 1rem;
+
+                a {
+                    display: block;
+                    padding: 4px 8px;
+                    color: #85837a;
+                    text-decoration: none;
+                    line-height: 1;
+
+                    &:hover {
+                        background-color: #e6e5e0;
+                        color: #333;
+                    }
+
+                    &.__highlight {
+                        background-color: #e6e5e0;
+                        color: #333;
+                    }
+                }
+            }
         }
     }
 

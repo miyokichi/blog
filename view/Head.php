@@ -25,6 +25,7 @@ class Head
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton&display=swap">
             <script src="/js/app.js"></script>
             <script src="/js/indexGenerater.js"></script>
+            <script src="/js/indexHighlighter.js"></script>
 
             <!-- facebookのOGPタグ -->
             <!--

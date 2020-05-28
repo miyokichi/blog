@@ -100,6 +100,7 @@ class MarkdownObject
             $this->rowCount++;
         }
         $parser = new \cebe\markdown\MarkdownExtra();
+        $parser->html5 = true;
         $this->htmlContent = $parser->parse($this->markdown);
     }
 }

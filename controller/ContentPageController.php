@@ -92,12 +92,15 @@ class ContentPageController
             </div>
         </header>
 
-        <div class="content_index" id="js-content_index">
-            <p>目次</p>
+        <div class="content_index">
+            <div class="content_index_box" id="js-content_index_box">
+                <label class="content_index_box_label" for="content_index_status">index</label>
+                <input type="checkbox" id="content_index_status">
+            </div>
         </div>
 
         <main class="content_main">
-            <article class="content_main_article">
+            <article class="content_main_article" id="js-content_main_article">
                 <?=$content->htmlContent?>
             </article>
 

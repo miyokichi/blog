@@ -22,7 +22,7 @@ if ($pathname === 'search/') {
 }
 
 //インデックスを行う場合--------------------------------------------------------------------------------
-if($pathname === 'index/'){
+if($pathname === 'indexing/'){
     controller\IndexResultPageController::Show();
     exit;
 }
@@ -140,7 +140,7 @@ else {
         </div>
 
         <main class="content_main">
-            <article class="content_main_article">
+            <article class="content_main_article" id="js-content_main_article">
                 <?=$content->htmlContent?>
             </article>
 
